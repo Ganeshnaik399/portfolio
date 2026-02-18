@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-ganesh</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="tailwind.config.js"></script>     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="overflow-x-hidden font-outfit leading-8 dark:bg-[#11001f] dark:text-white">
+      <div class="fixed top-0 right-0 w-11/12-z-10 translate-y-[-88%] dark:hidden " >
+          <img src="photo/backk.png" alt="" class="w-full" >
+       </div>
+     <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center 
+            justify-between z-50 " >
+           <img src="photo/namelogo.png" alt="ganesh naik" 
+            class="w-36 cursor-pointer mr-16 border rounded-sm border-none hover:scale-110 hover:shadow-[1px_4px_10px_yellow] hover:animate-pulse dark:bg-gradient-to-r from-[#b820e6] to-[#bc0a0d] dark:text-white ">
+          <ul class="hidden md:flex items-center gap-6 lg:gap-8
+                  rounded-full px-12 py-3 shadow-sm bg-opacity-50 font-Ovo
+                  group-hover:bg-transparent hover:border border-red-600/50 dark:border dark:border-white/50 dark:bg-transparent dark:text-white">
+              <li><a href="#top" class="hover:text-[#ffff31] hover:text-shadow-[1px_0px_3px_blue]">HOME</a></li>
+              <li><a href="#about" class="hover:text-[#ffff31] hover:text-shadow-[1px_0px_3px_blue]">ABOUT ME</a></li>
+              <li><a href="#services" class="hover:text-[#ffff31] hover:text-shadow-[1px_0px_3px_blue]">SERVICES</a></li>
+              <li><a href="#work" class="hover:text-[#ffff31] hover:text-shadow-[1px_0px_3px_blue]">MY WORK</a></li>
+              <li><a href="#contact" class="hover:text-[#ffff31] hover:text-shadow-[1px_0px_3px_blue] ">CONTACT ME</a></li>
+           </ul>
+          <div class="flex items-center gap-4" >
+            <button onclick="toggleTheme()" class="border rounded-full cursor-pointer bg-lightHover dark:bg-darkHover"> 
+                <img src="photo/moon2.png" alt="Moon Icon" class="w-6 dark:hidden">
+                <img src="photo/light.png" alt="Light Icon" class="w-6 hidden dark:block">
+            </button>
+               <a href="#contact" class="hidden lg:flex items-center gap-4 px-5 py-2
+                   border border-gray-500 rounded-full ml-2 font-Ovo font-bold " >Contact
+                  <img src="photo/right-up.png" alt="arrow" class="w-8 dark:hidden" >
+                  <img src="photo/right-arrow.png" alt="arrow" class="w-8 hidden dark:block">
+               </a>
+               <button class="block md:hidden ml-3" onclick="openMenu()">
+                 <img src="photo/menu-itemss.png" alt="menu-items" class="w-6 dark:bg-white" >
+                 </button>
+           </div>
+         <!------mobile menu-->
+
+          <ul id="sidemenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64
+                top-0 bottom-0 w-60 z-50 h-screen bg-red-200 transition duration-500 font-Ovo
+                dark:bg-[#2a004a] dark:text-white" >
+               <!--cross to close menu items-->
+              <div class="absolute right-6 top-6">
+                  <img src="photo/cross.png" alt="" class="w-5 cursor-pointer" onclick="closeMenu()" >
+              </div>
+               <li><a href="#top" class="hover:text-yellow-300" onclick="closeMenu()">HOME</a></li>
+               <li><a href="#about" class="hover:text-yellow-300" onclick="closeMenu()">ABOUT ME</a></li>
+               <li><a href="#services" class="hover:text-yellow-300" onclick="closeMenu()">SERVICES</a></li>
+               <li><a href="#work" class="hover:text-yellow-300" onclick="closeMenu()">MY WORK</a></li>
+               <li><a href="#contact" class="hover:text-yellow-300" onclick="closeMenu()">CONTACT ME</a></li>
+            </ul>
+      </nav>
+      <!-------header----->
+      <div class="w-10/11 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+           <img src="photo/13.webp" alt="profile" class="rounded-full w-32 mt-20 hover:scale-110" >
+           <h3 class="flex  gap-4 font-Ovo text-[30px]">Hii I'm Ganesh Naik Lavoodya <img src="photo/hand.png" alt="" class="w-6 animate-bounce"></h3>
+           <h1 class="text-[#ffff31] font-semibold">Student / FreeLancer </h1>
+             <p class="max-w-2xl mx-auto font-normal font-Ovo">Motivated software developer with skills in Java, 
+                Python, and C++, and frontend expertise in HTML, CSS, Tailwind and JavaScript. Currently learning backend
+                 development, data visualization with Tableau, and exploring  Prompt generative AI and machine learning.
+                 Eager to contribute to innovative projects in a collaborative environment.
+           </p>
+      <!-----contact me ------->
+            <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+                <a class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20]
+                text-wrap flex items-center gap-2" href="#contact">contact me <img src="photo/rightarrow.png" alt="" class="w-4"></a>
+                 <!------reesume downloasd------->
+                <a class="px-10 py-3 border rounded-full border-green-500
+                 flex items-center gap-2 bg-blue-400 transition delay-150 duration-300
+                  ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-red-200  font-Ovo" 
+                  href="https://drive.google.com/file/d/1IDQ2PLA3vV8xBRaMdCbICtpygxm8Lkbu/view?usp=drive_link" download> My Resume<img src="photo/download.png" alt="" class="w-5 size-6 animate-bounce"></a>
+            </div>
+      </div>
+     <!-----header tag completed-------->
+         <!-----about me-->
+                <div id="about" class="w-full px-[12%] py-20 scroll-mt-20 ">
+                    <h4 class="text-center mb-2 text-lg">Introduction</h4>
+                    <h2 class="text-center text-5xl ">About me</h2>
+                    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20 ">
+                         <div class="max-w-max mx-auto reletive ">
+                               <img src="photo/ani1.avif" alt="" class="w=64 sm:w-80 rounded-3xl max-w-none">
+                                <div class=" w-1/2 mb-20 ml-20 mt-5 aspect-square right-0 bottom-0 rounded-full
+                                    translate-x-3/4 -translate-y-3/4 shadow-[0_4px_55px_rbga(149,0,162,0.15)] flex items-center justify-center">
+                                   <img src="photo/rrrr.png" alt="" class="w-12 rounded-full animate-ping">
+                               </div>
+                           </div>
+                        <div class="flex-1">
+                              <p class=" max-w-2xl font-Ovo">I am passionate about technology and software development in java,
+ Python</span> used for basic <span class="text-green-600 font-medium">Machine Learning</span> projects, while Java and C++ help me solve DSA problems complexity. 
+    I build responsive websites using modern tools. Currently, I am learning 
+    <span class="text-yellow-200 font-medium">Backend Development, Data Visualization, and Data Management</span> to develop full-stack applications and extract meaningful insights from data. 
+    I enjoy <span class="italic text-yellow-600">travelling</span>, which broadens my creativity and perspective. 
+    I believe in <span class="text-pink-600 font-semibold">teamwork</span> as a key to solving real-world problems efficiently. 
+    My goal is to continuously improve my skills and contribute to innovative tech solutions.
+                              </p>
+                                 <ul class="grid grid-cols sm:grid-cols-3 gap-6 max-w-2xl font-Ovo">
+                                      <li class="border-[0.5px] border-gray-400 p-6 cursor-pointer rounded-lg
+                                         hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:rounded-xl
+                                            hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#d14f72] dark:bg-rose-300"><img src="photo/coding.png" alt="" class="w-7 mt-3 hover:animate-ping">
+                                         <h3 class="my-4 font-semibold text-gray-700 ">Languages</h3>
+                                         <p class="text-gray-600 text-sm">C,Python,Java,C++,DSA Oops concepts, (Ai&ML Basic Models), FrontEnd (html,css,javascript)</p>
+                                       </li>
+                                       <li class="border-[0.5px] border-gray-400 p-6 cursor-pointer rounded-lg
+                                          hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:rounded-xl
+                                         hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#d14f72] dark:bg-rose-300"><img src="photo/education.png" alt="" class="w-7 mt-3">
+                                         <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+                                         <p class="text-gray-600 text-sm"><b>B.tech CMRIT(hyd)</b><br> Artificial Intelligence & Machine Learning 2022-2026
+                                         </p>
+                                      </li>
+                                       <li class="border-[0.5px] border-gray-400 p-6 cursor-pointer rounded-lg
+                                           hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:rounded-xl
+                                          hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#d14f72] dark:bg-rose-300"><img src="photo/project.png" alt="" class="w-7 mt-3">
+                                         <h3 class="my-4 font-semibold text-gray-700">PROJECTS</h3>
+                                          <p class="text-gray-600 text-sm">i)HYDERABADI CHAi WEB<br>ii) College Chat-Bot iii)Login-page iv)porsonal portfolio</p>
+                                       </li>
+                                   </ul>
+                                <h4 class="my-6 text-gray-700 font-Ovo  dark:text-white ">Tools i used</h4>
+                                  <!------for tools we used in ----->
+                               <ul class="flex items-center gap-3 sm:gap-5 ">
+                                <li  class="flex items-center justify-center w-12 sm:w-14
+                                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                                hover:-translate-y-1 duration-500">
+                                    <img src="photo/vscode.png" alt="">
+                                </li>
+                                <li  class="flex items-center justify-center w-12 sm:w-14
+                                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                                hover:-translate-y-1 duration-500">
+                                    <img src="photo/chrome.png" alt="">
+                                </li>
+                                <li  class="flex items-center justify-center w-12 sm:w-14
+                                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                                hover:-translate-y-1 duration-500">
+                                    <img src="photo/github.png" alt="">
+                                </li>
+                                <li  class="flex items-center justify-center w-12 sm:w-14
+                                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                                hover:-translate-y-1 duration-500">
+                                    <img src="photo/nodejs.png" alt="">
+                                </li>
+                                <li  class="flex items-center justify-center w-12 sm:w-14
+                                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                                hover:-translate-y-1 duration-500">
+                                    <img src="photo/reaact.png" alt="">
+                                </li>
+                               </ul>
+                        </div>
+                    </div>
+                    <!-- Problem Solving Summary Section -->
+<div id="coding-summary" class="w-full px-[12%] py-20 font-Ovo bg-gradient-to-r from-[#f4ea60] to-[#da7d20] dark:from-[#2a004a] dark:to-[#11001f] rounded-3xl shadow-[0_8px_20px_rgba(0,0,0,0.3)] my-16">
+  <h2 class="text-center text-5xl font-bold text-black dark:text-white mb-8">Problem Solving Journey</h2>
+  <p class="text-center text-lg text-gray-800 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+    Passionate about improving my coding skills through consistent practice across leading platforms using
+    <span class="font-semibold text-blue-700 dark:text-blue-400">Java</span> and
+    <span class="font-semibold text-yellow-500 dark:text-yellow-300">Python</span>.
+  </p>
+
+  <div class="grid sm:grid-cols-3 gap-8 justify-center text-center">
+    <!-- GeeksforGeeks -->
+    <a href="https://www.geeksforgeeks.org/user/22r01a7399/"> <div class="bg-white dark:bg-[#32204a] rounded-2xl p-8 shadow-lg hover:scale-105 transition-transform duration-500 border border-yellow-400 dark:border-pink-400">
+      <img src="photo/gfgblack.png" alt="GeeksforGeeks" class="w-16 mx-auto mb-4 rounded-full border-2 border-green-500">
+      <h3 class="text-2xl font-semibold text-green-700 dark:text-green-300">GeeksforGeeks</h3>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">Solved <span class="font-bold text-black dark:text-yellow-300">150+</span> problems <br> Got ⭐⭐ Stars</p>
+    </div></a>
+
+    <!-- CodeChef -->
+    <a href=""><div class="bg-white dark:bg-[#32204a] rounded-2xl p-8 shadow-lg hover:scale-105 transition-transform duration-500 border border-orange-400 dark:border-yellow-400">
+      <img src="photo/codechef.jpg" alt="CodeChef" class="w-16 mx-auto mb-4 rounded-full border-2 border-orange-500">
+      <h3 class="text-2xl font-semibold text-orange-700 dark:text-orange-300">CodeChef</h3>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">Solved in c++ Python at beginning level <span class="font-bold text-black dark:text-yellow-300">100+</span> problems</p>
+    </div></a> 
+
+    <!-- LeetCode -->
+    <a href="https://leetcode.com/u/ganeshnaik99/"> <div class="bg-white dark:bg-[#32204a] rounded-2xl p-8 shadow-lg hover:scale-105 transition-transform duration-500 border border-yellow-500 dark:border-lime-400">
+      <img src="photo/OIP.jpg" alt="LeetCode" class="w-16 mx-auto mb-4 rounded-full border-2 border-yellow-500">
+      <h3 class="text-2xl font-semibold text-yellow-600 dark:text-yellow-300">LeetCode</h3>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">Solved <span class="font-bold text-black dark:text-yellow-300">60+</span> problems <br>Array,LinkedList,String</p>
+    </div></a>
+  </div>
+</div>
+
+              </div>
+       <!------services-->
+       <div id="services" class="w-full px-[12%] py-20 scroll-mt-20  flex-1  font-Ovo">
+              <h4 class="text-center mb-5 text-lg font-Ovo">what i Offer</h4>
+              <h2 class="text-center text-5xl font-Ovo">My SERVICEs</h2>
+              <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Frontend Development Service I design  and develop modern 
+       responsive, and user-friendly websites tailored to client needs,my work includes building e-commerce frontends with
+       product listings and shopping cart flows,interactive chatbot interfaces for customer engagemnt, and professional
+       portfolio websites to highlight personal or business branding. I specilaize in HTML CSS ,JAVASCRIPT ,Focusing on clean
+       UI/UX design ,cross-device compatibility,and smooth on deployment.
+              </p>
+
+               <div class="grid grid-cols sm:grid-cols-4 gap-6 my-10  max-w-max">
+                
+                  <div class="border border-gray-400 rounded-lg px-8 py-12
+                     cursor-pointer  hover:bg-[#fcf4ff] hover:shadow-[4px_4px_0_#000] dark:bg-rose-300
+                         hover:-translate-y-1 duration-500 hover:rounded-xl font-Ovo dark:hover:shadow-[4px_4px_0_#d14f72] ">
+                    <img src="photo/education.png" alt="" class="w-10">
+                    <h3 class="text-lg my-4 text-gray-700">WEB design</h3>
+                    <p class="text-sm text-gray-600 reading-5">I create modern ,responsive,and user-friendly websites
+                        that deliver a seamless digital experience..
+                    </p>
+                    <a href="" class="flex items-center gap-2 text-sm mt-5  dark:text-white">read more <img src="photo/rightarrow.png" alt="" class="w-4"></a>
+                   </div>
+                  <div class="border border-gray-400 rounded-lg px-8 py-12
+                    cursor-pointer hover:bg-[#fcf4ff] hover:shadow-[4px_4px_0_#000] dark:bg-rose-300
+                   hover:-translate-y-1 duration-500 hover:rounded-xl font-Ovo dark:hover:shadow-[4px_4px_0_#d14f72]">
+                    <img src="photo/education.png" alt="" class="w-10">
+                    <h3 class="text-lg my-4 text-gray-700">Mobile Application</h3>
+                    <p class="text-sm text-gray-600 reading-5">I design and develop intuitive,responsive,and user-friendly
+                        mobile web application for user experience
+                    </p>
+                    <a href="" class="flex items-center gap-2 text-sm mt-5 ">read more <img src="photo/rightarrow.png" alt="" class="w-4"></a>
+                 </div>
+                 <div class="border border-gray-400 rounded-lg px-8 py-12
+                     cursor-pointer  hover:bg-[#fcf4ff] hover:shadow-[4px_4px_0_#000] dark:bg-rose-300
+                     hover:-translate-y-1 duration-500 hover:rounded-xl font-Ovo dark:hover:shadow-[4px_4px_0_#d14f72]">
+                     <img src="photo/education.png" alt="" class="w-10">
+                     <h3 class="text-lg my-4 text-gray-700">ux-ui design</h3>
+                     <p class="text-sm text-gray-600 reading-5">i craft clean , modern and user-focused UI/UX designs that 
+                        enhance usability and deliver engaging digital experiences..
+                     </p>
+                     <a href="" class="flex items-center gap-2 text-sm mt-5 ">read more <img src="photo/rightarrow.png" alt="" class="w-4"></a>
+                  </div>
+                   <div class="border border-gray-400 rounded-lg px-8 py-12
+                       cursor-pointer  hover:bg-[#fcf4ff] dark:bg-rose-300 hover:-translate-y-1 duration-500 
+                       hover:rounded-xl hover:shadow-[4px_4px_0_#000] font-Ovo dark:hover:shadow-[4px_4px_0_#d14f72]">
+                       <img src="photo/education.png" alt="" class="w-10">
+                       <h3 class="text-lg my-4 text-gray-700">FREE Lanceir</h3>
+                        <p class="text-sm text-gray-600 reading-5">Frontend Development Service I design  and develop modern 
+       responsive, and user-friendly websites tailored to client needs..
+                        </p>
+                         <a href="" class="flex items-center gap-2 text-sm mt-5 ">read more <img src="photo/rightarrow.png" alt="" class="w-4"></a>
+                  </div>
+             </div>
+       </div>
+   <!------my work of projects------->
+   <div id="work" class="w-full px-[12%] py-20 scrool-mt-20 font-Ovo flex-1">
+        <h4 class="text-center mt-5 text-lg font-Ovo ">MY Portfolio</h4>
+        <h2 class="text-center text-5xl font-Ovo">MY Latest works</h2>
+             <p class="text-center w-full mx-auto mt-5 mb-12 font-Ovo">Developed two web-based projects—a college chatbot and a chai-themed website. 
+                The college chatbot provides students and visitors with real-time assistance on courses, admissions, and events through an interactive,
+                 responsive interface, improving accessibility and engagement. The chai-themed website showcases tea varieties, recipes, and brewing tips 
+                 with a visually appealing design, smooth navigation, and interactive elements, enhancing user experience and creative presentation. Both
+                  projects demonstrate skills in HTML, CSS (Tailwind), JavaScript, and responsive web development.</p>
+              <div class=" grid grid-cols sm:grid-cols-4 gap-6 ml-9 max-w-5xl">
+                <div class="aspect-square bg-[url('photo/portfolio.png')] bg-no-repeat dark:shadow-[4px_8px_8px_#9e080f]
+                bg-cover bg-center rounded-lg relative cursor-pointer group hover:-translate-y-1  hover:shadow-[4px_4px_0_#000]">
+                   <div class="bg-transparent blur hover:blur-none w-10/12 rounded-md absolute bottom-5
+                       left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500
+                       group-hover:bottom-7 group-hover:bg-slate-300 font-ovo dark:text-black">
+                       <div >
+                           <h2 class="font-semibold">PORTFOLIO WEBSITE</h2>
+                           <p class="text-sm text-red-500">web page</p>
+                       </div>
+                       <div class="border rounded-full border-black-w-8 aspect-square flex items-center
+                       justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition hover:bg-red-500 hover:scale-150">
+                        <a href=""> <img src="photo/slider.png" alt="" class="w-5"></a>
+                       </div>
+                    </div>
+                </div>
+                <div class="aspect-square bg-[url('photo/chai.png')] bg-no-repeat dark:shadow-[4px_8px_8px_#9e080f]
+                bg-cover bg-center rounded-lg relative cursor-pointer group hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
+                   <a href="https://ganeshnaik399.github.io/Chai---bites/"><div class="bg-transparent blur hover:blur-none w-10/12 rounded-md absolute bottom-5
+                       left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500
+                       group-hover:bottom-7 group-hover:bg-slate-300 dark:text-black">
+                       <div>
+                           <h2 class="font-semibold">HYDERABADI CHAI..</h2>
+                           <p class="text-sm text-red-500">E-Commerce</p>
+                       </div>
+                       <div class="border rounded-full border-black-w-8 aspect-square flex items-center
+                       justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition hover:bg-red-500 hover:scale-150">
+                        <a href="https://ganeshnaik399.github.io/Chai---bites/"><img src="photo/slider.png" alt="" class="w-5"></a>
+                       </div>
+                    </div>
+              </div>
+                <div class="aspect-square bg-[url('photo/chatbot.png')]  bg-no-repeat dark:shadow-[4px_8px_8px_#9e080f]
+                bg-cover bg-center rounded-lg relative cursor-pointer group hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
+                  <a href="https://ganeshnaik399.github.io/college_info_chatbot/"><div class="bg-transparent blur hover:blur-none w-10/12 rounded-md absolute bottom-5
+                       left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500
+                       group-hover:bottom-7 group-hover:bg-slate-300 dark:text-purple-700">
+                       <div >
+                           <h2 class="font-semibold">COLLEGE CHATBOT</h2>
+                           <p class="text-sm text-red-500">Resposive design</p>
+                       </div>
+                       <div class="border rounded-full border-black-w-8 aspect-square flex items-center
+                       justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition hover:bg-red-500 hover:scale-150">
+                       <a href="https://ganeshnaik399.github.io/college_info_chatbot/"><img src="photo/slider.png" alt="" class="w-5"></a> 
+                       </div>
+                    </div>
+                </div>
+                <div class="aspect-square bg-[url('photo/login.png')] bg-no-repeat dark:shadow-[4px_8px_8px_#9e080f]
+                bg-cover bg-center rounded-lg relative cursor-pointer group hover:-translate-y-1 hover:shadow-[4px_4px_0_#000]">
+                  <a href="https://ganeshnaik399.github.io/Login_web/"><div class="bg-transparent blur hover:blur-none w-10/12 rounded-md absolute bottom-5
+                       left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500
+                       group-hover:bottom-7 group-hover:bg-slate-300 dark:text-black">
+                       <div >
+                           <h2 class="font-semibold">Front-End  Login_Page</h2>
+                           <p class="text-sm text-red-500">UI/UX design</p>
+                       </div>
+                       <div class="border rounded-full border-black-w-8 aspect-square flex items-center
+                       justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition hover:bg-red-500 hover:scale-150">
+                        <a href="https://ganeshnaik399.github.io/Login_web/"><img src="photo/slider.png" alt="" class="w-5"></a>
+                       </div>
+                    </div>
+                </div>
+              </div>
+            <a href="#" class="w-max flex items-center justify-center gap-2 text-gray-700
+            border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20
+            hover:bg-[#f4ea60] duration-500  dark:text-white">Show More
+        <img src="photo/slider.png" alt="" class="w-4 dark:text-white"></a>
+        
+   </div>
+   <!-------Contact us-->
+   <div id="contact" class="w-full px-[12%] py-20 scrool-mt-20 bg-[url('')]
+         bg-no-repeat bg-[length:90% Auto] bg-center ">
+    <h4 class="text-center mt-5 text-lg font-Ovo">Connect with mee</h4>
+    <h2 class="text-center text-5xl font-Ovo">Get in Touch</h2>
+    <pre class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you !
+        If you have any query , please comments or feedback 
+             let me know yaar!!!
+    </pre>
+    <form action="" class="max-w-2xl mx-auto">
+        <div class="grid grid-cols-2 gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your name" class="flex-1 p-3
+            outline-none border-[1px] border-gray-200 rounded-md bg-white hover:shadow-[1px_4px_12Px_red] hover:placeholder-[#cfe34a] dark:bg-[#323963] dark:text-white">
+       
+        <input type="text" placeholder="Enter your Email " class="flex-1 p-3
+        outline-none border-[1px] border-gray-200 rounded-md hover:shadow-[1px_4px_12Px_red] bg-white dark:bg-[#323963] dark:text-white">
+    </div>
+    <textarea rows="6" placeholder="Enter your msg here....." class="w-full p-4 outline-none hover:shadow-[1px_4px_12Px_red]
+    border-[1px] border-black-200 rounded-md bg-white mb-6 dark:bg-[#323963] dark:text-[#fcffa4] "></textarea>
+    <button class="w-max flex items-center justify-center gap-2 hover:shadow-[1px_4px_12Px_red] text-white bg-gradient-to-r from-[#6de7a4] to-[#f12905]
+    border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto dark:bg-blue-400
+    hover:bg-[#f4ea60] duration-500">Submit now
+<img src="photo/rightarrow.png" alt="" class="w-6 rounded-lg hover:bg-green-500"></button>
+    </form>
+</div>
+<!---------footer---------->
+<div class="mt-18 dark:border dark: border-red-500 dark:bg-[#E3735E] " >
+    <div class="text-center">
+        <img src="photo/namelogo.png" alt="" class="w-36 mx-auto mb-2">
+        <div class="w-max flex items-center gap-2 mx-auto font-Ovo text-yellow-300">
+            <i class="fa-regular fa-envelope text-black dark:text-white"> :</i>
+             ganeshnaikLavoodya2004@gmail.com
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between
+    border-t border-black mx-[5%] mb-10">
+        <p> © 2025 Ganesh Naik. All rights reserved.| Contact: info@ganeshnaikLavoodya2004@gmail.com</p>
+        <ul class="flex items-center gap-5 justify-center mt-4 sm:mt-5 ">
+            <li><a href="https://www.linkedin.com/in/ganeshnaik2004/" class="w-8 text-blue-800 text-[30px] "><i class="fa-brands fa-linkedin  hover:animate-bounce hover:-translate-y-1 duration-500"></i></a></li>
+            <li><a href="https://github.com/ganeshnaik399/" class="text-[30px]"><i class="fa-brands fa-github hover:animate-bounce hover:-translate-y-1 duration-500"></i></a></li>
+            <li><a href="https://wa.me/+918374585828." class="text-[30px] text-green-400"><i class="fa-brands fa-whatsapp hover:animate-bounce hover:-translate-y-1 duration-500"></i></a></li>
+            <li><a href="" class="w-8 text-pink-800 text-[30px]"><i class="fa-brands fa-instagram hover:animate-bounce hover:-translate-y-1 duration-500"></i></i></a></li>
+        </ul>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
